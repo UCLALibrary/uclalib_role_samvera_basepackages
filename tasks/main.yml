@@ -1,0 +1,12 @@
+---
+
+- name: Install 'Development tools' package group
+  yum:
+    name: "@{{ devtools_group }}"
+    state: present
+
+- name: Install required Samvera base packages and libraries
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ base_packages }}"
