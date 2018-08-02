@@ -26,3 +26,9 @@ base_packages:
   - qt5-qtwebkit-devel
   - libxvidcore4
   - libxvidcore4-devel
+
+mysql_version: 5.6.41
+
+mysql_major_version: "{{ mysql_version.split('.')[0] }}.{{ mysql_version.split('.')[1] }}"
+
+mysql_client_rpm_url: "https://dev.mysql.com/get/Downloads/MySQL-{{ mysql_major_version }}/MySQL-client-{{ mysql_version }}-1.el7.x86_64.rpm"
