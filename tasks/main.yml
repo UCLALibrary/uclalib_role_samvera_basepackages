@@ -11,7 +11,10 @@
     state: present
   with_items: "{{ base_packages }}"
 
-- name: Install MySQL client
+- name: Install MySQL client and devel packages
   yum:
-    name: "{{ mysql_client_rpm_url }}"
+    name: "{{ item }}"
     state: present
+  with_items:
+    - "{{ mysql_client_rpm_url }}"
+    - "{{ mysql_devel_rpm_url }}"
