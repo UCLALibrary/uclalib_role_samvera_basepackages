@@ -18,3 +18,4 @@
   with_items:
     - "{{ mysql_client_rpm_url }}"
     - "{{ mysql_devel_rpm_url }}"
+    - "{{ mysql_shared_rpm_url }}"
