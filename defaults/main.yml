@@ -34,3 +34,5 @@ mysql_major_version: "{{ mysql_version.split('.')[0] }}.{{ mysql_version.split('
 mysql_client_rpm_url: "https://dev.mysql.com/get/Downloads/MySQL-{{ mysql_major_version }}/MySQL-client-{{ mysql_version }}-1.el7.x86_64.rpm"
 
 mysql_devel_rpm_url: "https://dev.mysql.com/get/Downloads/MySQL-{{ mysql_major_version }}/MySQL-devel-{{ mysql_version }}-1.el7.x86_64.rpm"
+
+mysql_shared_rpm_url: "https://dev.mysql.com/get/Downloads/MySQL-{{ mysql_major_version }}/MySQL-shared-{{ mysql_version }}-1.el7.x86_64.rpm"
