@@ -1,6 +1,9 @@
 ---
 
-dependencies: []
+dependencies:
+  - { role: ansible_uclalib_role_rhel7repos }
+  - { role: uclalib_role_epel }
+  - { role: ansible_uclalib_role_uclalibrepo }
 
 galaxy_info:
   author: Stephen Gurnick - https://github.com/sgurnick
