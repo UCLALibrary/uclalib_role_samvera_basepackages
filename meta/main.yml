@@ -1,0 +1,15 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  author: Stephen Gurnick - https://github.com/sgurnick
+  description:
+  company: UCLA Library
+  license: reference license.txt
+  min_ansible_version: 2.4
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  galaxy_tags: []
