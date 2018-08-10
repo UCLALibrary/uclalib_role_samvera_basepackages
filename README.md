@@ -1,7 +1,7 @@
 uclalib_role_samvera_basepackages
 =========
 
-This Ansible roles install the necessary set of base packages to begin a Samvera installation
+Ansible role to install the necessary set of base packages to begin a Samvera installation
 
 Requirements
 ------------
@@ -14,9 +14,9 @@ It is expected the following yum repositories are installed/configured:
 Role Variables
 --------------
 
-  - devtools_group - group name for the development packages
+* `devtools_group` - group name for the development packages
 
-  - base_packages - list of base packages and libraries
+* `base_packages` - list of base packages and libraries
 
 Dependencies
 ------------
