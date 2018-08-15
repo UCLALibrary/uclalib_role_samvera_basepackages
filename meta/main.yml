@@ -1,9 +1,9 @@
 ---
 
 dependencies:
-  - git+https://github.com/UCLALibrary/uclalib_role_rhel7repos.git
-  - git+https://github.com/UCLALibrary/uclalib_role_epel.git
-  - git+https://github.com/UCLALibrary/uclalib_role_uclalibrepo.git
+  - src: git+https://github.com/UCLALibrary/uclalib_role_rhel7repos.git
+  - src: git+https://github.com/UCLALibrary/uclalib_role_epel.git
+  - src: git+https://github.com/UCLALibrary/uclalib_role_uclalibrepo.git
 
 galaxy_info:
   author: Stephen Gurnick - https://github.com/sgurnick
