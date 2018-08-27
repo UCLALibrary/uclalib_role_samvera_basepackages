@@ -26,13 +26,19 @@ base_packages:
   - qt5-qtwebkit-devel
   - libxvidcore4
   - libxvidcore4-devel
+  - yum-utils
 
-mysql_version: 5.6.41
 
-mysql_major_version: "{{ mysql_version.split('.')[0] }}.{{ mysql_version.split('.')[1] }}"
+# MySQL packages
+mysql_defaultrepo_version: "80"
 
-mysql_client_rpm_url: "https://dev.mysql.com/get/Downloads/MySQL-{{ mysql_major_version }}/MySQL-client-{{ mysql_version }}-1.el7.x86_64.rpm"
+mysql_yumrepo_rpm: "https://dev.mysql.com/get/mysql{{ mysql_defaultrepo_version }}-community-release-el7-1.noarch.rpm"
 
-mysql_devel_rpm_url: "https://dev.mysql.com/get/Downloads/MySQL-{{ mysql_major_version }}/MySQL-devel-{{ mysql_version }}-1.el7.x86_64.rpm"
+mysql_install_version: "5.6"
 
-mysql_shared_rpm_url: "https://dev.mysql.com/get/Downloads/MySQL-{{ mysql_major_version }}/MySQL-shared-{{ mysql_version }}-1.el7.x86_64.rpm"
+mysql_installrepo_version: "{{ mysql_install_version.split('.')[0] }}{{ mysql_install_version.split('.')[1] }}"
+
+mysql_packages:
+  - mysql-community-client
+  - mysql-community-devel
+  - mysql-community-libs
