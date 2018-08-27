@@ -24,8 +24,6 @@ base_packages:
   - gdbm-devel
   - libffi-devel
   - qt5-qtwebkit-devel
-  - libxvidcore4
-  - libxvidcore4-devel
   - yum-utils
 
 
