@@ -2,7 +2,7 @@
 
 - name: Install 'Development tools' package group
   yum:
-    name: "@{{ devtools_group }}"
+    name: "{{ devtools_group }}"
     state: present
 
 - name: Install required Samvera base packages and libraries

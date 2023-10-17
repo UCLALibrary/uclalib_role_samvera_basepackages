@@ -1,6 +1,37 @@
 ---
 
-devtools_group: "Development tools"
+devtools_group: # expanded from "@Development tools"
+ # Mandatory Packages:
+ - autoconf
+ - automake
+ - binutils
+ - bison
+ - flex
+ - gcc
+ - gcc-c++
+ - gettext
+ - libtool
+ - make
+ - patch
+ - pkgconfig
+ - redhat-rpm-config
+ - rpm-build
+ - rpm-sign
+ # Default Packages:
+ - byacc
+ - cscope
+ - ctags
+ - diffstat
+ - elfutils
+ - gcc-gfortran
+ - git
+ - indent
+ - intltool
+ - patchutils
+ - rcs
+ - subversion
+ - swig
+ - systemtap
 
 base_packages:
   - curl
