@@ -2,7 +2,7 @@
 
 - name: Install Updated MySQL GPG Key
   rpm_key:
-    key: https://repo.mysql.com/RPM-GPG-KEY-mysql-2023
+    key: https://repo.mysql.com/RPM-GPG-KEY-mysql
     state: present
 
 - name: Download MySQL yum repository package (works around forbidden bug)
