@@ -2,8 +2,12 @@
 
 - name: Install Updated MySQL GPG Key
   rpm_key:
-    key: https://repo.mysql.com/RPM-GPG-KEY-mysql
+    key: '{{ item }}'
     state: present
+  with_items:
+    - https://repo.mysql.com/RPM-GPG-KEY-mysql
+    - https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+    - https://repo.mysql.com/RPM-GPG-KEY-mysql-2023
 
 - name: Download MySQL yum repository package (works around forbidden bug)
   get_url:
@@ -18,6 +22,11 @@
   yum:
     name: "/tmp/{{ mysql_yumrepo_rpm }}"
     state: present
+
+- name: Update to newest repo version
+  yum:
+   name: 'mysql{{ mysql_defaultrepo_version }}-community-release'
+   state: latest
 
 - name: Disable default MySQL repository (EL7)
   command: >
