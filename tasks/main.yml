@@ -7,9 +7,8 @@
 
 - name: Install required Samvera base packages and libraries
   yum:
-    name: "{{ item }}"
+    name: "{{ base_packages }}"
     state: present
-  with_items: "{{ base_packages }}"
 
 - name: Set-up MySQL yum repository
   include_tasks: setup_mysql_yumrepo.yml
