@@ -30,7 +30,9 @@ base_packages:
 # MySQL packages
 mysql_defaultrepo_version: "80"
 
-mysql_yumrepo_rpm: "https://dev.mysql.com/get/mysql{{ mysql_defaultrepo_version }}-community-release-el8-9.noarch.rpm"
+mysql_repo_release: "el8-9"
+
+mysql_yumrepo_rpm: "https://repo.mysql.com/mysql{{ mysql_defaultrepo_version }}-community-release-{{ mysql_repo_release }}.noarch.rpm"
 
 mysql_install_version: "5.7"
 
