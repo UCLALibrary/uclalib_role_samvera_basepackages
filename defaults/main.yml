@@ -34,7 +34,7 @@ mysql_repo_release: "el8-9"
 
 mysql_yumrepo_rpm: "https://repo.mysql.com/mysql{{ mysql_defaultrepo_version }}-community-release-{{ mysql_repo_release }}.noarch.rpm"
 
-mysql_install_version: "5.7"
+mysql_install_version: "8.0"
 
 mysql_installrepo_version: "{{ mysql_install_version.split('.')[0] }}{{ mysql_install_version.split('.')[1] }}"
 
