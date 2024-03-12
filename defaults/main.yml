@@ -1,6 +1,37 @@
 ---
 
-devtools_group: "Development tools"
+devtools_group: # expanded from "@Development tools"
+ # Mandatory Packages:
+ - autoconf
+ - automake
+ - binutils
+ - bison
+ - flex
+ - gcc
+ - gcc-c++
+ - gettext
+ - libtool
+ - make
+ - patch
+ - pkgconfig
+ - redhat-rpm-config
+ - rpm-build
+ - rpm-sign
+ # Default Packages:
+ - byacc
+ - cscope
+ - ctags
+ - diffstat
+ - elfutils
+ - gcc-gfortran
+ - git
+ - indent
+ - intltool
+ - patchutils
+ - rcs
+ - subversion
+ - swig
+ - systemtap
 
 base_packages:
   - curl
@@ -20,7 +51,7 @@ base_packages:
   - xfsprogs
   - sqlite-devel
   - yasm
-  - prelink
+  # - prelink # not in rhel8 baseos / appstream / codeready builder
   - gdbm-devel
   - libffi-devel
   - qt5-qtwebkit-devel
@@ -30,9 +61,8 @@ base_packages:
 # MySQL packages
 mysql_defaultrepo_version: "80"
 
-mysql_repo_release: "el8-9"
-
-mysql_yumrepo_rpm: "https://repo.mysql.com/mysql{{ mysql_defaultrepo_version }}-community-release-{{ mysql_repo_release }}.noarch.rpm"
+mysql_yumrepo_rpm: "mysql{{ mysql_defaultrepo_version }}-community-release-el{{ ansible_distribution_major_version }}-1.noarch.rpm"
+mysql_yumrepo_url: "https://dev.mysql.com/get/{{ mysql_yumrepo_rpm }}"
 
 mysql_install_version: "8.0"
 
